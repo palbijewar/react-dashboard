@@ -5,6 +5,8 @@ import Customers from "./Customers";
 import Products from "./Products";
 import Reports from "./Reports";
 import Statistics from "./Statistics";
+import Settings from "./Settings";
+import Support from "./Support";
 
 export {
     Login,
@@ -13,5 +15,7 @@ export {
     Customers,
     Products,
     Reports,
-    Statistics
+    Statistics,
+    Settings,
+    Support
 }
