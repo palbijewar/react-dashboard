@@ -7,6 +7,7 @@ import Reports from "./Reports";
 import Statistics from "./Statistics";
 import Settings from "./Settings";
 import Support from "./Support";
+import Signup from "./Signup";
 
 export {
     Login,
@@ -17,5 +18,6 @@ export {
     Reports,
     Statistics,
     Settings,
-    Support
+    Support,
+    Signup
 }

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Button, Form, Input } from 'antd';
+import { UserOutlined, LockOutlined } from '@ant-design/icons'; // Import Ant Design icons
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import './app.css';
@@ -22,7 +23,6 @@ const App = () => {
       history("/dashboard");
     });
   };
-  
 
   return (
     <div className="container">
@@ -43,7 +43,7 @@ const App = () => {
             onSubmit={handleFormSubmit}
           >
             <Form.Item
-              label="Email"
+              label={<span style={{ color: 'grey', fontSize: '14px' }}>Email</span>}
               name="email"
               rules={[
                 {
@@ -51,22 +51,28 @@ const App = () => {
                 },
               ]}
             >
-              <Input placeholder="Enter your email" value={email} onChange={(e) => setEmail(e.target.value)} />
+              <Input prefix={<UserOutlined style={{ marginRight: 8, color: 'grey' }} />} placeholder="Enter your email" value={email} onChange={(e) => setEmail(e.target.value)} style={{ borderRadius: '4px', height: '40px' }} />
             </Form.Item>
 
             <Form.Item
-              label="Password"
+              label={<span style={{ color: 'grey', fontSize: '14px', float: 'right' }}>Password</span>}
               name="password"
               rules={[
                 {
                   message: 'Please enter your password!',
                 },
               ]}
+              extra={
+                <div style={{ textAlign: 'right', marginBottom: '8px' }}>
+                  <a href="/" style={{ color: 'grey', fontSize: '12px' }}>Forgot Password?</a>
+                </div>
+              }
             >
-              <Input.Password placeholder="Enter your password" value={password} onChange={(e) => setPassword(e.target.value)} />
+              <Input.Password prefix={<LockOutlined style={{ marginRight: 8, color: 'grey' }} />} placeholder="Enter your password" value={password} onChange={(e) => setPassword(e.target.value)} style={{ borderRadius: '4px', height: '40px' }} />
             </Form.Item>
+
             <Form.Item>
-              <Button type="primary" htmlType="submit" className="login-button" onClick={handleFormSubmit} >
+              <Button type="primary" htmlType="submit" className="login-button" onClick={handleFormSubmit} style={{ borderRadius: '4px', height: '40px', backgroundColor: 'blue' }}>
                 Log In
               </Button>
             </Form.Item>

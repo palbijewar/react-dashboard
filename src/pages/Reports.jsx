@@ -10,7 +10,7 @@ import {
   SettingOutlined,
   CustomerServiceOutlined,
 } from '@ant-design/icons';
-import { Layout, Menu, Avatar, Card } from 'antd';
+import { Layout, Menu, Avatar } from 'antd';
 import { Link } from 'react-router-dom';
 
 const {  Sider } = Layout;

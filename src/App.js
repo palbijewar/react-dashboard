@@ -1,4 +1,4 @@
-import { Login, Dashboard, Sales, Customers, Products, Reports, Statistics,  Settings, Support } from "./pages";
+import { Login, Dashboard, Sales, Customers, Products, Reports, Statistics,  Settings, Support, Signup } from "./pages";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -6,6 +6,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/login" element={<Login />} />
+        <Route path="/" element={<Signup />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/sales" element={<Sales />} />
         <Route path="/customers" element={<Customers />} />

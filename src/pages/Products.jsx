@@ -9,12 +9,11 @@ import {
   UserOutlined,
   SettingOutlined,
   CustomerServiceOutlined,
-  BellOutlined,
 } from '@ant-design/icons';
-import { Layout, Menu, Avatar, Card } from 'antd';
+import { Layout, Menu, Avatar } from 'antd';
 import { Link } from 'react-router-dom';
 
-const { Header, Content, Footer, Sider } = Layout;
+const {  Sider } = Layout;
 
 const items = [
   { key: 'dashboard', label: 'Dashboard', icon: <AppstoreOutlined />, path: '/dashboard' },
