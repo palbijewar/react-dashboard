@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Button, Form, Input } from 'antd';
+import { UserOutlined, LockOutlined, MailOutlined } from '@ant-design/icons'; 
 import './app.css';
 
 const Signup = () => {
@@ -28,7 +29,7 @@ const Signup = () => {
             autoComplete="off"
           >
   <Form.Item
-              label="Username"
+              label={<span style={{ color: 'grey', fontSize: '14px', float: 'right' }}>Username</span>}
               name="username"
               rules={[
                 {
@@ -36,11 +37,11 @@ const Signup = () => {
                 },
               ]}
             >
-              <Input placeholder="Set your username" value={email} onChange={(e) => setEmail(e.target.value)} style={{ borderRadius: '4px', height: '40px' }} />
+              <Input prefix={<UserOutlined style={{ marginRight: 8, color: 'grey' }} />}   placeholder="Set your username" value={email} onChange={(e) => setEmail(e.target.value)} style={{ borderRadius: '4px', height: '40px' }} />
             </Form.Item>
 
             <Form.Item
-              label="Email"
+              label={<span style={{ color: 'grey', fontSize: '14px', float: 'right' }}>Email</span>}
               name="email"
               rules={[
                 {
@@ -48,11 +49,11 @@ const Signup = () => {
                 },
               ]}
             >
-              <Input placeholder="Set your email" value={email} onChange={(e) => setEmail(e.target.value)} style={{ borderRadius: '4px', height: '40px' }} />
+              <Input prefix={<MailOutlined style={{ marginRight: 8, color: 'grey' }} />} placeholder="Set your email" value={email} onChange={(e) => setEmail(e.target.value)} style={{ borderRadius: '4px', height: '40px' }} />
             </Form.Item>
 
             <Form.Item
-              label="Password"
+              label={<span style={{ color: 'grey', fontSize: '14px', float: 'right' }}>Password</span>}
               name="password"
               rules={[
                 {
@@ -60,14 +61,15 @@ const Signup = () => {
                 },
               ]}
             >
-              <Input.Password placeholder="Set your password" value={password} onChange={(e) => setPassword(e.target.value)} style={{ borderRadius: '4px', height: '40px' }} />
+              <Input.Password prefix={<LockOutlined style={{ marginRight: 8, color: 'grey' }} />}  placeholder="Set your password" value={password} onChange={(e) => setPassword(e.target.value)} style={{ borderRadius: '4px', height: '40px' }} />
             </Form.Item>
 
             <Form.Item>
-              <Button type="primary" htmlType="submit" className="login-button" href='/login' style={{ borderRadius: '4px', height: '40px' }}>
+              <Button type="primary" htmlType="submit" className="login-button" href='/login' style={{ borderRadius: '4px', height: '40px', backgroundColor: 'blue' }}>
                 Sign Up
               </Button>
             </Form.Item>
+            <p>Already a user? <a href='/login' >Login</a></p>
           </Form>
         </div>
       </div>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Button, Form, Input } from 'antd';
-import { UserOutlined, LockOutlined } from '@ant-design/icons'; // Import Ant Design icons
+import { MailOutlined, LockOutlined } from '@ant-design/icons'; 
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import './app.css';
@@ -51,7 +51,7 @@ const App = () => {
                 },
               ]}
             >
-              <Input prefix={<UserOutlined style={{ marginRight: 8, color: 'grey' }} />} placeholder="Enter your email" value={email} onChange={(e) => setEmail(e.target.value)} style={{ borderRadius: '4px', height: '40px' }} />
+              <Input prefix={<MailOutlined style={{ marginRight: 8, color: 'grey' }} />} placeholder="Enter your email" value={email} onChange={(e) => setEmail(e.target.value)} style={{ borderRadius: '4px', height: '40px' }} />
             </Form.Item>
 
             <Form.Item
