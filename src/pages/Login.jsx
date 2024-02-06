@@ -3,7 +3,7 @@ import { Button, Form, Input } from 'antd';
 import { MailOutlined, LockOutlined } from '@ant-design/icons'; 
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import './app.css';
+import './App.css';
 
 const App = () => {
   const [password, setPassword] = useState('');

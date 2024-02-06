@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Button, Form, Input } from 'antd';
 import { UserOutlined, LockOutlined, MailOutlined } from '@ant-design/icons'; 
-import './app.css';
+import './App.css';
 
 const Signup = () => {
   const [password, setPassword] = useState('');
