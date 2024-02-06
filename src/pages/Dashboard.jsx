@@ -1,67 +1,22 @@
 import React from 'react';
-import {
-  AppstoreOutlined,
-  BarChartOutlined,
-  CloudOutlined,
-  ShopOutlined,
-  TeamOutlined,
-  UploadOutlined,
-  UserOutlined,
-  SettingOutlined,
-  CustomerServiceOutlined,
-  BellOutlined,
-} from '@ant-design/icons';
-import { Layout, Menu, Avatar, Card } from 'antd';
-import { Link } from 'react-router-dom';
+import { BellOutlined } from '@ant-design/icons';
+import { Layout, Card } from 'antd';
+import CommonSider from '../components/Sider';
 
-const { Header, Content, Footer, Sider } = Layout;
-
-const items = [
-  { key: 'dashboard', label: 'Dashboard', icon: <AppstoreOutlined />, path: '/dashboard' },
-  { key: 'sales', label: 'Sales', icon: <BarChartOutlined />, path: '/sales' },
-  { key: 'products', label: 'Products', icon: <CloudOutlined />, path: '/products' },
-  { key: 'reports', label: 'Reports', icon: <ShopOutlined />, path: '/reports' },
-  { key: 'customers', label: 'Customers', icon: <TeamOutlined />, path: '/customers' },
-  { key: 'statistics', label: 'Statistics', icon: <UploadOutlined />, path: '/statistics' },
-];
+const { Header, Content } = Layout;
 
 const App = () => {
   return (
     <Layout style={{ minHeight: '100vh', backgroundColor: '#fff' }}>
-      <Sider style={{ backgroundColor: '#fff' }} width={250}> 
-        <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', marginBottom: 20 }}>
-          <Avatar size={48} icon={<UserOutlined />} style={{ borderRadius: 10, marginRight: 10, marginLeft: 10, marginTop: 12 }} />
-          <div style={{ textAlign: 'left' }}>
-            <p style={{ marginBottom: 4, color: 'purple', fontSize: 14, fontWeight: 'bold', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', maxWidth: 120 }}>Jacob Jones</p>
-            <p style={{ margin: 0, color: 'purple', fontSize: 12, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', maxWidth: 120 }}>jacob@example.com</p> 
-          </div>
+    <CommonSider selectedKey="dashboard" />
+    <Layout className="site-layout" style={{ backgroundColor: '#fff' }}>
+      <Header className="site-layout-background" style={{ height: 100, padding: '16px 24px', backgroundColor: '#fff', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+        <div style={{ color: '#26004d', fontSize: 35, fontWeight: 'bold', lineHeight: '1' }}>
+          Welcome<br />
+          Back Jacob!
         </div>
-        <Menu theme="light" mode="inline" defaultSelectedKeys={['dashboard']} style={{ marginBottom: 10, marginTop: 50 }}> 
-          {items.map((item) => (
-            <Menu.Item key={item.key} icon={item.icon}>
-              <Link to={item.path} style={{ color: 'purple', fontWeight: 'bold' }}>{item.label}</Link>
-            </Menu.Item>
-          ))}
-        </Menu>
-        <div style={{ marginTop: 100, marginBottom: 20 }}> 
-          <Menu theme="light" mode="inline">
-            <Menu.Item key="settings" icon={<SettingOutlined />}>
-              <Link to="/settings" style={{ color: 'purple', fontWeight: 'bold' }}>Settings</Link>
-            </Menu.Item>
-            <Menu.Item key="support" icon={<CustomerServiceOutlined />}>
-              <Link to="/support" style={{ color: 'purple', fontWeight: 'bold' }}>Support</Link>
-            </Menu.Item>
-          </Menu>
-        </div>
-      </Sider>
-      <Layout className="site-layout" style={{ backgroundColor: '#fff' }}>
-      <Header className="site-layout-background" style={{ height:100,padding: '16px 24px', backgroundColor: '#fff', display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}> 
-  <div style={{ color: '#26004d', fontSize: 35, fontWeight: 'bold', lineHeight: '1' }}>
-    Welcome<br />
-    Back Jacob!
-  </div>
-  <BellOutlined style={{ fontSize: 24, color: 'purple' }} />
-</Header>
+        <BellOutlined style={{ fontSize: 24, color: 'purple' }} />
+      </Header>
         <Content style={{ margin: '0 16px', background: '#fff' }}>
           <div className="site-layout-background" style={{ padding: 24, minHeight: 360}}>
             <div style={{ display: 'flex', justifyContent: 'space-between' }}>
