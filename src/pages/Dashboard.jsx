@@ -56,23 +56,26 @@ const App = () => {
       </Sider>
       <Layout className="site-layout" style={{ backgroundColor: '#fff' }}>
         <Header className="site-layout-background" style={{ padding: 0, backgroundColor: '#fff', display: 'flex', justifyContent: 'space-between', alignItems: 'center', height: 150 }}> 
-          <div style={{ color: 'purple', fontSize: 30, fontWeight: 'bold', marginLeft: 16}}> <div>Welcome</div> <div>Back Jacob!</div> </div> 
+        <div style={{ color: 'purple', fontSize: 25, fontWeight: 'bold', marginLeft: 16 }} >
+        <div>Welcome</div> 
+          <div >Back Jacob!</div>
+        </div>
           <BellOutlined style={{ fontSize: 14, marginRight: 16 }} />
         </Header>
         <Content style={{ margin: '0 16px', background: '#fff' }}>
-          <div className="site-layout-background" style={{ padding: 24, minHeight: 360 }}>
+          <div className="site-layout-background" style={{ padding: 24, minHeight: 360}}>
             <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-              <Card style={{ width: 300, background: '#8527b0', color: 'white', marginBottom: 20, boxShadow: '0px 2px 8px rgba(0, 0, 0, 0.15)' }}>
+              <Card style={{ width: 300, height:150, background: '#8527b0', borderRadius:20 , color: 'white', marginBottom: 20, boxShadow: '0px 2px 8px rgba(0, 0, 0, 0.15)', marginRight: 20 }}>
                 <p style={{ fontSize: 14, marginBottom: 0 }}>Total Clients</p>
-                <p style={{ fontSize: 24, fontWeight: 'bold', marginTop: 0 }}>3,248</p>
+                <p style={{ fontSize: 34, fontWeight: 'bold', marginTop: 0 }}>3,248</p>
               </Card>
-              <Card style={{ width: 300, background: '#fff', color: 'black', marginBottom: 20, boxShadow: '0px 2px 8px rgba(0, 0, 0, 0.15)' }}>
+              <Card style={{ width: 300,height:150, background: '#fff', borderRadius:20, color: 'black', marginBottom: 20, boxShadow: '0px 2px 8px rgba(0, 0, 0, 0.15)', marginRight: 20 }}>
                 <p style={{ fontSize: 14, marginBottom: 0 }}>Total Orders</p>
-                <p style={{ fontSize: 24, fontWeight: 'bold', marginTop: 0, color: '#2f133b' }}>2,492</p>
+                <p style={{ fontSize: 34, fontWeight: 'bold', marginTop: 0, color: '#2f133b' }}>2,492</p>
               </Card>
-              <Card style={{ width: 300, background: '#fff', color: 'black', marginBottom: 20, boxShadow: '0px 2px 8px rgba(0, 0, 0, 0.15)' }}>
+              <Card style={{ width: 300,height:150, background: '#fff', borderRadius:20, color: 'black', marginBottom: 20, boxShadow: '0px 2px 8px rgba(0, 0, 0, 0.15)' }}>
                 <p style={{ fontSize: 14, marginBottom: 0 }}>Total Revenue</p>
-                <p style={{ fontSize: 24, fontWeight: 'bold', marginTop: 0 }}>5,742</p>
+                <p style={{ fontSize: 34, fontWeight: 'bold', marginTop: 0 }}>5,742</p>
               </Card>
             </div>
           </div>
